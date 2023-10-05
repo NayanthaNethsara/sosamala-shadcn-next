@@ -1,12 +1,12 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "Sosamala",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "Sosamala is a smart electronic system designed to monitor and care for rose plants. ",
   mainNav: [
     {
-      title: "Home",
+      title: "Dashboard",
       href: "/",
     },
   ],
