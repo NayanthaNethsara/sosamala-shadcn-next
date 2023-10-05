@@ -24,7 +24,7 @@ const MistingNozzleUpdate = () => {
   };
 
   return (
-    <button onClick={handleUpdateMistingNozzle} className={buttonVariants({ variant: isMistingNozzleOn ? "destructive" : "default" })}>
+    <button onClick={handleUpdateMistingNozzle} className={buttonVariants({ variant: isMistingNozzleOn ? "destructive" : "" })}>
       {isMistingNozzleOn ? "Turn Off Misting Nozzle" : "Turn On Misting Nozzle"}
     </button>
   );
