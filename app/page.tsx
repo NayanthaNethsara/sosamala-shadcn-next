@@ -1,8 +1,10 @@
 "use client"
 import Link from "next/link"
+import { buttonVariants } from "@/components/ui/button"
 import { Humidity,Temperature,Moisture } from "@/components/firebase-read"
 import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import { MistingNozzleUpdate } from "@/components/status-update"
+
 
 
 export default function IndexPage() {
@@ -25,22 +27,7 @@ export default function IndexPage() {
       </div>
 
       <div className="flex gap-4">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants()}
-        >
-          Documentation
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline" })}
-        >
-          GitHub
-        </Link>
+        <MistingNozzleUpdate></MistingNozzleUpdate>
       </div>
     </section>
   )
