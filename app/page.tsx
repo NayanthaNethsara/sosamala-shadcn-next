@@ -1,9 +1,8 @@
 "use client"
 import Link from "next/link"
 import { buttonVariants } from "@/components/ui/button"
-import { Humidity,Temperature,Moisture } from "@/components/firebase-read"
+import { Humidity,Temperature,Moisture , MistingNozzleUpdate} from "@/components/firebase-read"
 import { siteConfig } from "@/config/site"
-import { MistingNozzleUpdate } from "@/components/status-update"
 
 
 
