@@ -108,7 +108,7 @@ const Humidity = () => {
   };
 
   return (
-    <button onClick={handleUpdateMistingNozzle} className={buttonVariants({ variant: isMistingNozzleOn ? "destructive" : "default" })}>
+    <button onClick={handleUpdateMistingNozzle} className={buttonVariants()}>
       {isMistingNozzleOn ? "Turn Off Misting Nozzle" : "Turn On Misting Nozzle"}
     </button>
   );
