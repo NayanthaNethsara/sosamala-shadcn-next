@@ -48,7 +48,7 @@ const Humidity = () => {
       <>
         {temperature !== null ? (
           <div className="text-xl font-regular leading-tight tracking-tighter md:text-xl">
-            Temperature : {temperature} %
+            Temperature : {temperature} C
           </div>
         ) : (
           "Loading..."
