@@ -6,7 +6,7 @@ export default function EnvCard({iconSrc, percentage, sensorName}:{
     sensorName: string
 }) {
   return (
-    <div className="flex aspect-square w-44 flex-col items-center justify-center gap-y-3 rounded-2xl bg-white p-3 [background:radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
+    <div className="flex  aspect-square w-44 flex-col items-center justify-center gap-y-3 rounded-2xl border bg-white p-3 [background:radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
       <Image
         src={iconSrc}
         alt=""
@@ -16,7 +16,7 @@ export default function EnvCard({iconSrc, percentage, sensorName}:{
       />
       <p className="font-semibold">{percentage}%</p>
 
-      <div className="flex flex-row gap-1 justify-center items-center text-center">
+      <div className="flex flex-row items-center justify-center gap-1 text-center">
         <Image
           alt=""
           src="/icons/alert-circle.svg"
