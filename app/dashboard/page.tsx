@@ -1,24 +1,35 @@
 "use client"
 
-import {
-  Card,
-  Grid,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Text,
-  Title,
-} from "@tremor/react"
+import Image from "next/image"
+
+import EnvCard from "@/components/custom/EnvCard"
 
 export default function DashboardExample() {
   return (
-    <main className="p-12">
-      <h1 className="text-2xl font-bold">Hello Sosamala</h1>
-      {/* <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</Text> */}
+    <main className="px-5">
+      {/* Environment Variables */}
+      <div className="mt-10">
+        <h2>Environment Variables</h2>
 
-      
+        <div className="mt-5 flex flex-wrap justify-between gap-y-6">
+          
+          <EnvCard iconSrc="/icons/drop.svg" sensorName="Humidity Percentage" percentage={72} />
+
+          <EnvCard iconSrc="/icons/drop.svg" sensorName="Humidity Percentage" percentage={72} />
+
+          <EnvCard iconSrc="/icons/drop.svg" sensorName="Humidity Percentage" percentage={72} />
+
+          <EnvCard iconSrc="/icons/drop.svg" sensorName="Humidity Percentage" percentage={72} />
+
+        </div>
+      </div>
+
+
+        {/* Plant Details */}
+
+        
+
+
     </main>
   )
 }
