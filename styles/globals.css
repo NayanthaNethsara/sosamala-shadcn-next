@@ -77,4 +77,15 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  /* Custom stack styles */
+}
+
+.stack-parent {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.stack-child {
+  grid-area: 1 / 1 / 2 / 2;
 }
