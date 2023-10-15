@@ -6,7 +6,7 @@ import Image from "next/image"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import SideBarThumbnails from "@/components/custom/SideBarThumbnails"
+import SideBar from "@/components/custom/SideBar"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
@@ -42,51 +42,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="stack-parent  grid min-h-screen">
+            <div className="stack-parent relative  grid min-h-screen">
               {/* Side menu */}
-              <aside className="stack-child z-[999] flex h-screen w-[70dvw] flex-col justify-between bg-[#0A0A0A] px-16 py-10">
-                {/* logo here */}
-                <div className="flex flex-row gap-3">
-                  <SideBarThumbnails
-                    src="/icons/logo.svg"
-                    title="Sosamala"
-                    textColor="text-neutral-200"
-                  />
+              <SideBar />
 
-                  
-                </div>
-
-                {/* Sections here */}
-                <ul className="flex flex-col gap-10 ">
-                  <li>
-                    <SideBarThumbnails
-                      src="/icons/home.svg"
-                      title="Home"
-                      textColor="text-[#4BFFBE]"
-                    />
-                  </li>
-                  <li>
-                    <SideBarThumbnails src="/icons/home.svg" title="Superior" />
-                  </li>
-                  <li>
-                    <SideBarThumbnails src="/icons/home.svg" title="Logs" />
-                  </li>
-                  <li>
-                    <SideBarThumbnails src="/icons/home.svg" title="About" />
-                  </li>
-                  <li>
-                    <SideBarThumbnails src="/icons/home.svg" title="Team" />
-                  </li>
-                </ul>
-
-                {/* logout button */}
+              {/* Top bar */}
+              {/* -------------------------------  meke thiyene height ekema Body eke  "pt"padding-top eke widiyata denne ---------devnote */}
+              <div className="stack-child z-[98] flex h-24 w-full flex-row items-center justify-between  px-5">
                 <div>
-                  <SideBarThumbnails src="/icons/home.svg" title="Logout" />
+                  <h2 className="text-xl font-bold">Hello, Sosamala</h2>
+                  <p className="text-sm">Welcome back and check your plants</p>
                 </div>
-              </aside>
+
+                <Image alt="" src="/img/profile.svg" width={100} height={100} className="w-12 rounded-full" />
+              </div>
 
               {/* Body */}
-              <div className="stack-child z-0 bg-slate-500">{children}</div>
+              <div className="stack-child z-0 bg-[#0E0E0E] pt-24">{children}</div>
             </div>
             {/* <TailwindIndicator /> */}
           </ThemeProvider>
