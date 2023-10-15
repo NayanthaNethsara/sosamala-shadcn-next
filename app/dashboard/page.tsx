@@ -42,7 +42,11 @@ export default function DashboardExample() {
 
       {/* Plant Details */}
       <div className="flex flex-col gap-y-5">
-        <h2 className="text-xl font-semibold">Plant Details</h2>
+        <div className="flex flex-row items-center justify-between">
+          <h2 className="text-xl font-semibold">Plant Details</h2>
+
+          <Link href="/">See all</Link>
+        </div>
 
         <PlantDetailsChart />
       </div>
@@ -56,7 +60,9 @@ export default function DashboardExample() {
         {/* See more button */}
 
         <Link href="/">
-          <div className="rounded-2xl bg-[#1E1E1E] py-3 text-[#4BFFBE] text-center">see more</div>
+          <div className="rounded-2xl bg-[#1E1E1E] py-3 text-center text-[#4BFFBE]">
+            see all
+          </div>
         </Link>
       </div>
     </main>
