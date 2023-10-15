@@ -1,12 +1,14 @@
 "use client"
 
+import Link from "next/link"
+
 import BloomsList from "@/components/custom/BloomsList"
 import EnvCard from "@/components/custom/EnvCard"
 import PlantDetailsChart from "@/components/custom/PlantDetailsChart"
 
 export default function DashboardExample() {
   return (
-    <main className="flex flex-col gap-y-10 px-5">
+    <main className="flex flex-col gap-y-10 px-5 mb-10">
       {/* Environment Variables */}
       <div className="mt-10 flex flex-col gap-y-5">
         <h2 className="text-xl font-semibold">Environment Variables</h2>
@@ -46,10 +48,16 @@ export default function DashboardExample() {
       </div>
 
       {/* Blooms */}
-      <div>
+      <div className="flex flex-col gap-y-5">
         <h2 className="text-xl font-semibold">Blooms</h2>
 
         <BloomsList />
+
+        {/* See more button */}
+
+        <Link href="/">
+          <div className="rounded-2xl bg-[#1E1E1E] py-3 text-[#4BFFBE] text-center">see more</div>
+        </Link>
       </div>
     </main>
   )
