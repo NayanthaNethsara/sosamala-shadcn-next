@@ -2,9 +2,9 @@
 
 import Link from "next/link"
 
-import BloomsList from "@/components/custom/BloomsList"
-import EnvCard from "@/components/custom/EnvCard"
-import PlantDetailsChart from "@/components/custom/PlantDetailsChart"
+import BloomsList from "@/components/BloomsList"
+import EnvCard from "@/components/EnvCard"
+import PlantDetailsChart from "@/components/PlantDetailsChart"
 
 export default function DashboardExample() {
   return (
@@ -15,11 +15,8 @@ export default function DashboardExample() {
         <div className="space-y-1">
           <h4 className="text-2xl font-bold leading-none">Hello, Sosamala</h4>
           <p className="text-l text-muted-foreground">
-            Welcome back and chek[asf[]sa].
+            Welcome back and exlpore your plants.
           </p>
-        </div>
-        <div className="space-y-2">
-          <h2 className="text-xl font-semibold">Environment Variables</h2>
         </div>
 
         <div className="flex flex-wrap justify-between gap-y-6">

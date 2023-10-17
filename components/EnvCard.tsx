@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import { onValue, ref, set } from "firebase/database"
 
-import { db } from "../../app/firebase"
+import { db } from "../app/firebase"
 
 export default function EnvCard({
   iconSrc,
@@ -39,13 +39,6 @@ export default function EnvCard({
       </p>
 
       <div className="flex flex-row items-center justify-center gap-1 text-center">
-        <Image
-          alt=""
-          src="/icons/alert-circle.svg"
-          width={20}
-          height={20}
-          className="aspect-square w-4"
-        />
         <p className="text-xs">{sensorName}</p>
       </div>
     </div>
