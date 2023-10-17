@@ -4,7 +4,7 @@ import Link from "next/link"
 
 import BloomsList from "@/components/BloomsList"
 import EnvCard from "@/components/EnvCard"
-import Overview from "@/components/PlantDetailsChart"
+import { Overview } from "@/components/PlantDetailsChart"
 
 export default function DashboardExample() {
   return (
