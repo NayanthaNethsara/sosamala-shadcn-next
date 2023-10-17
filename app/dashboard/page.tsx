@@ -4,7 +4,7 @@ import Link from "next/link"
 
 import BloomsList from "@/components/BloomsList"
 import EnvCard from "@/components/EnvCard"
-import PlantDetailsChart from "@/components/PlantDetailsChart"
+import Overview from "@/components/PlantDetailsChart"
 
 export default function DashboardExample() {
   return (
@@ -56,7 +56,7 @@ export default function DashboardExample() {
           <Link href="/">See all</Link>
         </div>
 
-        <PlantDetailsChart />
+        <Overview />
       </div>
 
       {/* Blooms */}

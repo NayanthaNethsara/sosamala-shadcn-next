@@ -1,50 +1,78 @@
-import { Card, LineChart, Title } from "@tremor/react"
+"use client"
 
-const chartdata = [
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
+
+const data = [
   {
-    year: 1970,
-    "Export Growth Rate": 2.04,
-    "Import Growth Rate": 1.53,
+    name: "Jan",
+    total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    year: 1971,
-    "Export Growth Rate": 1.96,
-    "Import Growth Rate": 1.58,
+    name: "Feb",
+    total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    year: 1972,
-    "Export Growth Rate": 1.96,
-    "Import Growth Rate": 1.61,
+    name: "Mar",
+    total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    year: 1973,
-    "Export Growth Rate": 1.93,
-    "Import Growth Rate": 1.61,
+    name: "Apr",
+    total: Math.floor(Math.random() * 5000) + 1000,
   },
   {
-    year: 1974,
-    "Export Growth Rate": 1.88,
-    "Import Growth Rate": 1.67,
+    name: "May",
+    total: Math.floor(Math.random() * 5000) + 1000,
   },
-  //...
+  {
+    name: "Jun",
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: "Jul",
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: "Aug",
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: "Sep",
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: "Oct",
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: "Nov",
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
+    name: "Dec",
+    total: Math.floor(Math.random() * 5000) + 1000,
+  },
 ]
 
-const valueFormatter = (number: any) =>
-  `$ ${new Intl.NumberFormat("us").format(number).toString()}`
-
-export default function PlantDetailsChart() {
+export function Overview() {
   return (
-    <Card>
-      <Title>Export/Import Growth Rates (1970 to 2021)</Title>
-      <LineChart
-        className="mt-6"
-        data={chartdata}
-        index="year"
-        categories={["Export Growth Rate", "Import Growth Rate"]}
-        colors={["emerald", "gray"]}
-        valueFormatter={valueFormatter}
-        yAxisWidth={40}
-      />
-    </Card>
+    <ResponsiveContainer width="100%" height={350}>
+      <BarChart data={data}>
+        <XAxis
+          dataKey="name"
+          stroke="#888888"
+          fontSize={12}
+          tickLine={false}
+          axisLine={false}
+        />
+        <YAxis
+          stroke="#888888"
+          fontSize={12}
+          tickLine={false}
+          axisLine={false}
+          tickFormatter={(value) => `$${value}`}
+        />
+        <Bar dataKey="total" fill="#adfa1d" radius={[4, 4, 0, 0]} />
+      </BarChart>
+    </ResponsiveContainer>
   )
 }
