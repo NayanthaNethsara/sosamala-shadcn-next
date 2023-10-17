@@ -31,20 +31,20 @@ export default function DashboardExample() {
           />
 
           <EnvCard
-            iconSrc="/icons/drop.svg"
+            iconSrc="/icons/temp.svg"
             sensorName="Temperature"
             sensor="Temperature"
             unit="C"
           />
 
           <EnvCard
-            iconSrc="/icons/drop.svg"
+            iconSrc="/icons/moisture.svg"
             sensorName="Moisture Level"
             sensor="Moisture"
           />
 
           <EnvCard
-            iconSrc="/icons/drop.svg"
+            iconSrc="/icons/water.svg"
             sensorName="Water Level"
             sensor="WaterLevel"
           />
