@@ -39,7 +39,7 @@ export default function EnvCard({
       </p>
 
       <div className="flex flex-row items-center justify-center gap-1 text-center">
-        <p className="text-xs">{sensorName}</p>
+        <p className="text-l font-reguler">{sensorName}</p>
       </div>
     </div>
   )

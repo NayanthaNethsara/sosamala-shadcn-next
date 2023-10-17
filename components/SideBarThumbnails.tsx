@@ -1,13 +1,15 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function SideBarThumbnails({
   src,
   alt = "",
-  width = 50,
-  height = 50,
+  width = 10,
+  height = 10,
   title,
   className = "w-7",
-  textColor = "text-neutral-200",
+  textstyle = "text-neutral-200 text-l font-reguler",
+  href,
 }: {
   src: string
   alt?: string
@@ -15,18 +17,21 @@ export default function SideBarThumbnails({
   height?: number
   title: string
   className?: string
-  textColor?: string
+  textstyle?: string
+  href: string
 }) {
   return (
-    <span className="flex flex-row gap-3">
-      <Image
-        alt={alt}
-        src={src}
-        width={width}
-        height={height}
-        className={className}
-      />
-      <p className={`text-xl font-semibold ${textColor}`}>{title}</p>
-    </span>
+    <Link href={href}>
+      <span className="flex flex-row gap-3 items-center">
+        <Image
+          alt={alt}
+          src={src}
+          width={width}
+          height={height}
+          className={className}
+        />
+        <p className={textstyle}>{title}</p>
+      </span>
+    </Link>
   )
 }

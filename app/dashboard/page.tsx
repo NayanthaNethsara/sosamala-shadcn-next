@@ -22,7 +22,7 @@ export default function DashboardExample() {
         <div className="flex flex-wrap justify-between gap-y-6">
           <EnvCard
             iconSrc="/icons/humidity.svg"
-            sensorName="Humidity Percentage"
+            sensorName="Humidity"
             sensor="Humidity"
             unit="%"
           />
