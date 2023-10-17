@@ -10,7 +10,14 @@ export default function DashboardExample() {
   return (
     <main className="flex flex-col gap-y-10 px-5 mb-10">
       {/* Environment Variables */}
+
       <div className="mt-10 flex flex-col gap-y-5">
+        <div className="space-y-1">
+          <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
+          <p className="text-sm text-muted-foreground">
+            An open-source UI component library.
+          </p>
+        </div>
         <h2 className="text-xl font-semibold">Environment Variables</h2>
 
         <div className="flex flex-wrap justify-between gap-y-6">
