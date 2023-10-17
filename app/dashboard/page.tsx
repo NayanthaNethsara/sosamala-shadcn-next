@@ -13,36 +13,40 @@ export default function DashboardExample() {
 
       <div className="mt-10 flex flex-col gap-y-5">
         <div className="space-y-1">
-          <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
-          <p className="text-sm text-muted-foreground">
-            An open-source UI component library.
+          <h4 className="text-2xl font-bold leading-none">Hello, Sosamala</h4>
+          <p className="text-l text-muted-foreground">
+            Welcome back and chek[asf[]sa].
           </p>
         </div>
-        <h2 className="text-xl font-semibold">Environment Variables</h2>
+        <div className="space-y-2">
+          <h2 className="text-xl font-semibold">Environment Variables</h2>
+        </div>
 
         <div className="flex flex-wrap justify-between gap-y-6">
           <EnvCard
-            iconSrc="/icons/drop.svg"
+            iconSrc="/icons/humidity.svg"
             sensorName="Humidity Percentage"
-            percentage={72}
+            sensor="Humidity"
+            unit="%"
           />
 
           <EnvCard
             iconSrc="/icons/drop.svg"
-            sensorName="Humidity Percentage"
-            percentage={72}
+            sensorName="Temperature"
+            sensor="Temperature"
+            unit="C"
           />
 
           <EnvCard
             iconSrc="/icons/drop.svg"
-            sensorName="Humidity Percentage"
-            percentage={72}
+            sensorName="Moisture Level"
+            sensor="Moisture"
           />
 
           <EnvCard
             iconSrc="/icons/drop.svg"
-            sensorName="Humidity Percentage"
-            percentage={72}
+            sensorName="Water Level"
+            sensor="WaterLevel"
           />
         </div>
       </div>

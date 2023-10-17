@@ -1,14 +1,30 @@
+import { useEffect, useState } from "react"
 import Image from "next/image"
+import { onValue, ref, set } from "firebase/database"
+
+import { db } from "../../app/firebase"
 
 export default function EnvCard({
   iconSrc,
-  percentage,
   sensorName,
+  sensor,
+  unit,
 }: {
   iconSrc: string
-  percentage: number
   sensorName: string
+  sensor: string
+  unit?: string
 }) {
+  const [sensordata, setSensorData] = useState(null)
+
+  useEffect(() => {
+    const SensorDataRef = ref(db, `Sosamala/SensorData/${sensor}`) // Use 'sensor' in the reference
+    onValue(SensorDataRef, (snapshot) => {
+      const data = snapshot.val()
+      setSensorData(data)
+    })
+  }, [sensor])
+
   return (
     <div className="flex  aspect-square w-40 flex-col items-center justify-center gap-y-3 rounded-2xl border">
       <Image
@@ -18,7 +34,9 @@ export default function EnvCard({
         height={100}
         className="aspect-square w-14"
       />
-      <p className="font-semibold">{percentage}%</p>
+      <p className="font-semibold">
+        {sensordata || 0} {unit}
+      </p>
 
       <div className="flex flex-row items-center justify-center gap-1 text-center">
         <Image

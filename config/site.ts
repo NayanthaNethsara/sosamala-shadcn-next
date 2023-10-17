@@ -4,14 +4,16 @@ export const siteConfig = {
   name: "Sosamala",
   description:
     "Sosamala is a smart electronic system designed to monitor and care for rose plants. ",
-  mainNav: [
-    {
-      title: "Dashboard",
-      href: "/dashboard",
-    },
+    
+  
+    mainNav: [
     {
       title: "Supirior",
       href: "/supirior",
+    },
+    {
+      title: "Team",
+      href: "/team",
     },
   ],
 
