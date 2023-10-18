@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 
+import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import BloomsList from "@/components/BloomsList"
 import EnvCard from "@/components/EnvCard"
 import { Overview } from "@/components/PlantDetailsChart"
@@ -13,12 +14,11 @@ export default function DashboardExample() {
 
       <div className="mt-10 flex flex-col gap-y-5">
         <div className="space-y-1">
-          <h4 className="text-2xl font-bold leading-none">Hello, Sosamala</h4>
-          <p className="text-l text-muted-foreground">
+          <CardTitle>Hello, Sosamala</CardTitle>
+          <CardDescription>
             Welcome back and exlpore your plants.
-          </p>
+          </CardDescription>
         </div>
-
         <div className="flex flex-wrap justify-between gap-y-6">
           <EnvCard
             iconSrc="/icons/humidity.svg"
