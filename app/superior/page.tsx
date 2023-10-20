@@ -1,4 +1,4 @@
-//@ts-nocheck
+// @ts-nocheck
 
 "use client"
 
@@ -33,7 +33,7 @@ const notifications = [
 
 type CardProps = React.ComponentProps<typeof Card>
 
-function Superior() {
+export default function Superior({ className, ...props }: CardProps) {
   return (
     <div className="p-4">
       <Card className={cn("w-[100%]", className)} {...props}>
@@ -82,5 +82,3 @@ function Superior() {
     </div>
   )
 }
-
-export default Superior
