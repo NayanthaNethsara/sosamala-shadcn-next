@@ -35,7 +35,7 @@ function App() {
             <p className="text-lg">Role: Project Manager</p>
             <p className="text-lg">
               Lahiru leads our projects, ensuring they are delivered on time and
-              meet our clients' needs.
+              meet our clients&apos; needs.
             </p>
           </div>
           <div>
