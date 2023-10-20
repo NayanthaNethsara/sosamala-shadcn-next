@@ -33,7 +33,7 @@ const notifications = [
 
 type CardProps = React.ComponentProps<typeof Card>
 
-function Superior({ className, ...props }: CardProps) {
+function Superior() {
   return (
     <div className="p-4">
       <Card className={cn("w-[100%]", className)} {...props}>
