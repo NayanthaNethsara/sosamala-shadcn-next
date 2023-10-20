@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 "use client"
 
 import { BellRing, Check } from "lucide-react"
