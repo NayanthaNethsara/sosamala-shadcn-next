@@ -12,7 +12,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
 import { Switch } from "@/components/ui/switch"
 
 const notifications = [
@@ -32,7 +31,7 @@ const notifications = [
 
 type CardProps = React.ComponentProps<typeof Card>
 
-export default function App({ className, ...props }: CardProps) {
+export default function Superior({ className, ...props }: CardProps) {
   return (
     <div className="p-4">
       <Card className={cn("w-[100%]", className)} {...props}>
