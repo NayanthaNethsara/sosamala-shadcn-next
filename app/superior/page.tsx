@@ -28,8 +28,6 @@ const notifications = [
   },
 ]
 
-type CardProps = React.ComponentProps<typeof Card>
-
 export default function Superior({ className, ...props }: any) {
   const [isSwitchOn, setIsSwitchOn] = useState(false)
 
