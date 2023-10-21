@@ -16,6 +16,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Switch } from "@/components/ui/switch"
+import { SensorData, StatusUpdate } from "@/components/firebase-update"
 
 import { db } from "../firebase"
 
@@ -73,20 +74,21 @@ export default function Superior({ className, ...props }: any) {
               >
                 <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
                 <div className="space-y-1">
-                  <p className="text-sm font-regular leading-none ">
+                  <p
+                    className={`text-sm font-regular leading-none ${
+                      isSwitchOn ? "" : "text-muted-foreground"
+                    }`}
+                  >
                     {notification.title}
                   </p>
-                  {!isSwitchOn ? null : <></>}
                 </div>
               </div>
             ))}
           </div>
+
+          <StatusUpdate superuser={isSwitchOn} dispenser="Dispenser" />
+          <StatusUpdate superuser={isSwitchOn} dispenser="MistingNozzle" />
         </CardContent>
-        <CardFooter>
-          <Button className="w-full">
-            <Check className="mr-2 h-4 w-4" /> Mark all as read
-          </Button>
-        </CardFooter>
       </Card>
     </div>
   )

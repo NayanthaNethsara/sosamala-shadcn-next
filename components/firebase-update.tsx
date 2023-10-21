@@ -28,14 +28,20 @@ const SensorData = ({ sensor }: { sensor: String }) => {
       ) : (
         "Loading..."
       )}
-      <div className="w-[400px]">
+      <div className="w-[100%]">
         <Progress value={sensordata || 0} />
       </div>
     </>
   )
 }
 
-const StatusUpdate = ({ dispenser }: { dispenser?: String }) => {
+const StatusUpdate = ({
+  superuser,
+  dispenser,
+}: {
+  superuser?: Boolean
+  dispenser?: String
+}) => {
   //const [newMistingNozzle, setNewMistingNozzle] = useState("");
   const [isdispenserOn, setIsDispenserOn] = useState(false) // Track the current state
 
@@ -58,10 +64,16 @@ const StatusUpdate = ({ dispenser }: { dispenser?: String }) => {
     <button
       onClick={handleUpdateMistingNozzle}
       className={buttonVariants({
-        variant: isdispenserOn ? "destructive" : "default",
+        variant: superuser
+          ? isdispenserOn
+            ? "destructive"
+            : "default"
+          : "secondary",
       })}
     >
-      {isdispenserOn ? `Turn Off ${dispenser}` : `Turn On ${dispenser}`}
+      {isdispenserOn && superuser
+        ? `Turn Off ${dispenser}`
+        : `Turn On ${dispenser}`}
     </button>
   )
 }
