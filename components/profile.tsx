@@ -23,7 +23,7 @@ export default function Profile({
     <Card>
       <CardHeader>
         <div className="flex w-full gap-5 grid-cols-2">
-          <Avatar.Root className=" inline-flex h-[100px] w-[100px] select-none items-center justify-center overflow-hidden rounded-full align-middle">
+          <Avatar.Root className="inline-flex min-h-[100px] min-w-[100px] select-none items-center justify-center overflow-hidden rounded-full align-middle">
             <Avatar.Image
               className="h-full w-full rounded-[inherit] object-cover"
               src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
