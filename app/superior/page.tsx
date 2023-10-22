@@ -3,20 +3,18 @@
 
 import React, { useEffect, useState } from "react"
 import { onValue, ref, set } from "firebase/database"
-import { Check, Shield } from "lucide-react"
+import { Shield } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
 import { Switch } from "@/components/ui/switch"
-import { SensorData, StatusUpdate } from "@/components/firebase-update"
+import { StatusUpdate } from "@/components/firebase-update"
 
 import { db } from "../firebase"
 

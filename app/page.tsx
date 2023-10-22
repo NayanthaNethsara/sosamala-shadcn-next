@@ -7,7 +7,7 @@ import BloomsList from "@/components/BloomsList"
 import EnvCard from "@/components/EnvCard"
 import { Overview } from "@/components/PlantDetailsChart"
 
-export default function DashboardExample() {
+export default function Dashboard() {
   return (
     <main className="flex flex-col gap-y-10 px-5 mb-10">
       {/* Environment Variables */}

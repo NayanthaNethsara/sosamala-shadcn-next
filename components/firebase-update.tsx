@@ -56,8 +56,7 @@ const StatusUpdate = ({
   const handleUpdateMistingNozzle = () => {
     const dispenserRef = ref(db, `Sosamala/Status/${dispenser}`)
     const newValue = !isdispenserOn
-
-    set(dispenserRef, newValue)
+    superuser ? set(dispenserRef, newValue) : null
   }
 
   return (
