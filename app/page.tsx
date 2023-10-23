@@ -47,8 +47,6 @@ export default function Dashboard() {
           />
         </div>
       </div>
-
-      {/* Plant Details */}
       <div className="flex flex-col gap-y-5">
         <div className="flex flex-row items-center justify-between">
           <h2 className="text-xl font-semibold">Plant Details</h2>
@@ -59,7 +57,6 @@ export default function Dashboard() {
         <Overview />
       </div>
 
-      {/* Blooms */}
       <div className="flex flex-col gap-y-5">
         <h2 className="text-xl font-semibold">Blooms</h2>
 
