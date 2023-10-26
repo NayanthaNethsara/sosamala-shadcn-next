@@ -36,7 +36,7 @@ const SensorData = ({ sensor }: { sensor: String }) => {
 }
 
 const StatusUpdate = ({
-  superuser,
+  superuser = true,
   dispenser,
 }: {
   superuser?: Boolean
