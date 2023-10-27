@@ -23,7 +23,11 @@ export default function SideBar() {
           src="/icons/superior.svg"
           title="Superior"
         />
-        <SideBarThumbnails href="/stats" src="/icons/logs.svg" title="Stats" />
+        <SideBarThumbnails
+          href="/supervision"
+          src="/icons/logs.svg"
+          title="Super Vision"
+        />
 
         <SideBarThumbnails href="/team" src="/icons/team.svg" title="Team" />
       </div>
