@@ -4,7 +4,7 @@ export default function BloomsList() {
       {/* Total value */}
       <ListItem
         label="Total Blooms"
-        value={32}
+        value={4}
         fontSize="text-lg"
         fontWidth="font-semibold"
         key="Total Blooms"
@@ -12,8 +12,8 @@ export default function BloomsList() {
 
       {/* Rest of the list */}
 
-      <ListItem label="Bloom In 1 Day" value={10} key="Bloom In 1 Day" />
-      <ListItem label="Bloom In 2 Days" value={12} key="Bloom In 2 Days" />
+      <ListItem label="Bloom In 1 Day" value={2} key="Bloom In 1 Day" />
+      <ListItem label="Bloom In 2 Days" value={2} key="Bloom In 2 Days" />
     </div>
   )
 }
